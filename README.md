@@ -1,73 +1,109 @@
-# Welcome to your Lovable project
+# SOC Threat Detection & Incident Response Lab
 
-## Project info
+## 📌 Overview
 
-**URL**: https://lovable.dev/projects/8eae2e96-4411-4f3f-a99e-b2e10fa7c002
+This project is a **real-world SOC (Security Operations Center) simulation lab**, designed to demonstrate practical skills in threat detection, incident response, and log analysis. It replicates core SOC Level 1 activities using open-source tools and cloud/on-premises environments.
 
-## How can I edit this code?
+The lab provides hands-on experience with:
 
-There are several ways of editing your application.
+* SIEM (Security Information and Event Management)
+* Log collection & correlation
+* Threat detection use cases
+* Incident response workflows
+* Security monitoring & reporting
 
-**Use Lovable**
+---
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/8eae2e96-4411-4f3f-a99e-b2e10fa7c002) and start prompting.
+## 🎯 Objectives
 
-Changes made via Lovable will be committed automatically to this repo.
+1. Build a SOC lab environment replicating enterprise workflows.
+2. Configure and deploy open-source SIEM (e.g., Wazuh, ELK Stack, or Splunk Free).
+3. Collect logs from endpoints, firewalls, and applications.
+4. Implement detection rules for common attacks (phishing, brute force, malware).
+5. Document incidents and response steps in a structured playbook format.
 
-**Use your preferred IDE**
+---
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## 🏗️ Project Structure
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+```
+SOC-Lab-Project/
+│
+├── README.md                # Project documentation
+├── architecture/            # Lab architecture diagrams
+│   └── soc_lab_architecture.png
+│
+├── setup/                   # Setup guides & configuration files
+│   ├── docker-compose.yml    # Example SIEM deployment
+│   ├── wazuh-setup.md        # Wazuh setup guide
+│   └── elk-setup.md          # ELK Stack setup guide
+│
+├── logs/                    # Sample log data for analysis
+│   ├── windows-event-logs/
+│   ├── linux-syslogs/
+│   └── firewall-logs/
+│
+├── detections/              # Detection rules & queries
+│   ├── brute_force_detection.yml
+│   ├── phishing_detection.yml
+│   └── malware_alerts.yml
+│
+├── incidents/               # Case studies of incidents
+│   ├── incident_001_bruteforce.md
+│   ├── incident_002_phishing.md
+│   └── incident_003_malware.md
+│
+├── playbooks/               # Incident response workflows
+│   ├── brute_force_playbook.md
+│   ├── phishing_playbook.md
+│   └── malware_playbook.md
+│
+└── reports/                 # SOC reports & dashboards
+    ├── weekly_report_template.docx
+    ├── threat_summary_sept2025.pdf
+    └── dashboard_screenshot.png
 ```
 
-**Edit a file directly in GitHub**
+---
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## 🛠️ Tools & Technologies
 
-**Use GitHub Codespaces**
+* **SIEM**: Wazuh, ELK Stack, or Splunk (Free)
+* **Log Sources**: Windows Event Logs, Linux Syslog, Firewall Logs
+* **Detection**: Sigma Rules, Custom Queries
+* **Visualization**: Kibana or Splunk Dashboards
+* **Response Documentation**: Markdown playbooks, SOC report templates
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+---
 
-## What technologies are used for this project?
+## 📚 Methodology
 
-This project is built with:
+1. Deploy SIEM using Docker or local setup.
+2. Configure log forwarding from endpoints.
+3. Write detection rules for brute force, phishing, and malware.
+4. Trigger test attacks (simulated).
+5. Document findings and incident response steps.
+6. Generate SOC reports for stakeholders.
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+---
 
-## How can I deploy this project?
+## 🚀 Getting Started
 
-Simply open [Lovable](https://lovable.dev/projects/8eae2e96-4411-4f3f-a99e-b2e10fa7c002) and click on Share -> Publish.
+1. Clone the repository:
 
-## Can I connect a custom domain to my Lovable project?
+```bash
+git clone https://github.com/yourusername/SOC-Lab-Project.git
+cd SOC-Lab-Project
+```
 
-Yes, you can!
+2. Follow the setup guides in `/setup` to deploy the lab.
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+3. Start monitoring logs and testing detections.
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+4. Document incidents in `/incidents`.
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.

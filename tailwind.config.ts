@@ -47,6 +47,27 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        // Threat level colors for SOC
+        critical: {
+          DEFAULT: "hsl(var(--critical))",
+          foreground: "hsl(var(--critical-foreground))",
+        },
+        high: {
+          DEFAULT: "hsl(var(--high))",
+          foreground: "hsl(var(--high-foreground))",
+        },
+        medium: {
+          DEFAULT: "hsl(var(--medium))",
+          foreground: "hsl(var(--medium-foreground))",
+        },
+        low: {
+          DEFAULT: "hsl(var(--low))",
+          foreground: "hsl(var(--low-foreground))",
+        },
+        safe: {
+          DEFAULT: "hsl(var(--safe))",
+          foreground: "hsl(var(--safe-foreground))",
+        },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
@@ -80,10 +101,50 @@ export default {
             height: "0",
           },
         },
+        "pulse-cyber": {
+          "0%, 100%": {
+            opacity: "1",
+            transform: "scale(1)",
+          },
+          "50%": {
+            opacity: "0.7",
+            transform: "scale(1.05)",
+          },
+        },
+        "scan-line": {
+          "0%": {
+            transform: "translateY(-100%)",
+          },
+          "100%": {
+            transform: "translateY(100vh)",
+          },
+        },
+        "glow": {
+          "0%, 100%": {
+            boxShadow: "0 0 5px hsl(var(--primary))",
+          },
+          "50%": {
+            boxShadow: "0 0 20px hsl(var(--primary)), 0 0 30px hsl(var(--primary))",
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "pulse-cyber": "pulse-cyber 2s ease-in-out infinite",
+        "scan-line": "scan-line 3s linear infinite",
+        "glow": "glow 2s ease-in-out infinite alternate",
+      },
+      backgroundImage: {
+        "gradient-cyber": "var(--gradient-cyber)",
+        "gradient-threat": "var(--gradient-threat)",
+        "gradient-safe": "var(--gradient-safe)",
+        "gradient-surface": "var(--gradient-surface)",
+      },
+      boxShadow: {
+        "cyber": "var(--shadow-cyber)",
+        "threat": "var(--shadow-threat)",
+        "elevated": "var(--shadow-elevated)",
       },
     },
   },
